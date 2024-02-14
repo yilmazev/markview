@@ -10,8 +10,9 @@ const Home: React.FC = () => {
             <header className="relative flex min-h-svh w-full justify-center bg-headerGrid bg-cover bg-center bg-no-repeat pt-8">
                 <div className="w-full max-w-7xl px-7">
                     <nav className="flex items-center justify-between">
-                        <div>
-                            <Image src="/assets/images/logo-light.svg" alt="Project Logo" width={130} height={70} priority={true} />
+                        <div className="relative">
+                            <Image src="/assets/images/logo-light.svg" alt="Markview Logo" width={236} height={60} priority={true} />
+                            <span className="absolute -right-12 -top-2 rounded-lg bg-primary-600 px-2 py-1 text-xs font-medium">Beta</span>
                         </div>
                         <div>
                             right
@@ -23,7 +24,7 @@ const Home: React.FC = () => {
                                 Quickly create <span className="!bg-clip-text [-webkit-text-fill-color:#0000] [background:linear-gradient(0deg,#b1a5eb,#a594fd_90%)] [text-fill-color:#0000]">README.md</span>
                             </h1>
                             <p className="mb-8 max-w-3xl text-center text-lg font-light text-white/75">
-                                MarkView offers the ability to quickly and effectively create stylish Markdown files, instantly enhancing your content. Add styles effortlessly and check the visual appeal of your content right away!
+                                Markview offers the ability to quickly and effectively create stylish Markdown files, instantly enhancing your content. Add styles effortlessly and check the visual appeal of your content right away!
                             </p>
                             <div className="flex items-center gap-4">
                                 <Button>
