@@ -1,0 +1,7 @@
+{
+    "typescript.preferences.quoteStyle": "double",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.sortJSON": true,
+        "source.organizeImports": true
+    },
+}
