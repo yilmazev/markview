@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     env: {
-        NEXT_PUBLIC_API_ENDPOINT: process.env.NEXT_PUBLIC_API_ENDPOINT,
+        OPENAI_API_KEY: process.env.OPENAI_API_KEY,
     },
     async headers() {
         return [
