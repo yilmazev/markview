@@ -51,10 +51,10 @@ export default App
                         Markview offers the ability to quickly and effectively create stylish Markdown files, instantly enhancing your content. Add styles effortlessly and check the visual appeal of your content right away!
                     </p>
                     <div className="flex flex-col items-center gap-4 sm:flex-row">
-                        <Link href="/editor">
+                        <Link href="/editor" aria-label="Get started">
                             <Button>Get started</Button>
                         </Link>
-                        <Link href="https://www.buymeacoffee.com/yilmazev" target="_blank">
+                        <Link href="https://www.buymeacoffee.com/yilmazev" target="_blank" aria-label="Donate">
                             <Button variant="secondary">
                                 <IconHeart className="size-5 fill-white/0 stroke-stone-400 stroke-[1.5px]" />
                                 Donate
