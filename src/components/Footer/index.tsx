@@ -13,10 +13,12 @@ const Footer: React.FC = () => {
                         <h4 className="mb-1 text-lg font-semibold">Send Feedback 💫</h4>
                         <p className="text-sm text-white/75">Share any issues, suggestions, or satisfaction you've encountered while using MarkView. Your feedback will help us enhance MarkView to be even better.</p>
                     </div>
-                    <Button variant="secondary" size="small">
-                        <IconMessageSquare className="size-4 fill-none stroke-stone-400 stroke-2" />
-                        Feedback
-                    </Button>
+                    <Link href="/feedback" aria-label="Feedback">
+                        <Button variant="secondary" size="small">
+                            <IconMessageSquare className="size-4 fill-none stroke-stone-400 stroke-2" />
+                            Feedback
+                        </Button>
+                    </Link>
                 </div>
                 <div className="mt-8 flex items-center justify-between gap-16 border-t border-stone-900 pt-6">
                     <p className="font-light text-stone-400/50">Design and coding <Link href="https://yilmazev.dev" className="font-medium" aria-label="Yilmaz Ev">Yilmaz Ev</Link> © {currentYear}</p>
