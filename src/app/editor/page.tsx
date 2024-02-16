@@ -1,7 +1,7 @@
-export default function Home() {
+import Editor from "@/containers/Editor"
+
+export default function PageEditor() {
     return (
-        <main className="p-12">
-            <h1 className="text-3xl font-bold">Hello buddy</h1>
-        </main>
+        <Editor />
     )
 }

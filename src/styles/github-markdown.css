@@ -1,0 +1,560 @@
+.markdown-preview {
+  @apply [-ms-text-size-adjust:100%] [-webkit-text-size-adjust:100%] text-white/95 text-base leading-normal [word-wrap:break-word] m-0;
+}
+
+.markdown-preview .octicon {
+  @apply inline-block fill-current align-text-bottom;
+}
+
+.markdown-preview details,
+.markdown-preview figcaption,
+.markdown-preview figure {
+  @apply block;
+}
+
+.markdown-preview summary {
+  @apply list-item;
+}
+
+.markdown-preview [hidden] {
+  @apply hidden;
+}
+
+.markdown-preview a {
+  @apply bg-transparent text-primary-600 font-medium underline;
+}
+
+.markdown-preview b,
+.markdown-preview strong {
+  @apply font-semibold;
+}
+
+.markdown-preview h1 {
+  @apply font-semibold text-[2em] mx-0 my-[0.67em] pb-[0.3em] border-b-stone-700 border-b border-solid;
+}
+
+.markdown-preview small {
+  @apply text-[90%];
+}
+
+.markdown-preview sub,
+.markdown-preview sup {
+  @apply text-[75%] leading-[0] relative align-baseline;
+}
+
+.markdown-preview sub {
+  @apply bottom-[-0.25em];
+}
+
+.markdown-preview sup {
+  @apply top-[-0.5em];
+}
+
+.markdown-preview img {
+  @apply max-w-full box-content border-none;
+}
+
+.markdown-preview code,
+.markdown-preview kbd,
+.markdown-preview pre,
+.markdown-preview samp {
+  @apply [font-family:monospace] text-[1em];
+}
+
+.markdown-preview figure {
+  @apply mx-10 my-[1em];
+}
+
+.markdown-preview hr {
+  @apply box-content overflow-hidden bg-stone-700 border-0 h-[1px] mx-0 my-6 p-0;
+}
+
+.markdown-preview input {
+  @apply [font:inherit] overflow-visible [font-family:inherit] text-[inherit] leading-[inherit] m-0;
+}
+
+.markdown-preview table {
+  @apply border-spacing-0 block w-max max-w-full overflow-auto border-collapse;
+}
+
+.markdown-preview td,
+.markdown-preview th {
+  @apply p-0;
+}
+
+.markdown-preview details summary {
+  @apply cursor-pointer;
+}
+
+.markdown-preview details:not([open]) > *:not(summary) {
+  @apply hidden;
+}
+
+.markdown-preview h1,
+.markdown-preview h2,
+.markdown-preview h3,
+.markdown-preview h4,
+.markdown-preview h5,
+.markdown-preview h6 {
+  @apply font-semibold leading-tight mt-6 mb-4;
+}
+
+.markdown-preview h2 {
+  @apply font-semibold text-[1.5em] pb-[0.3em] border-b-stone-700 border-b border-solid;
+}
+
+.markdown-preview h3 {
+  @apply font-semibold text-[1.25em];
+}
+
+.markdown-preview h4 {
+  @apply font-semibold text-[1em];
+}
+
+.markdown-preview h5 {
+  @apply font-semibold text-[0.875em];
+}
+
+.markdown-preview h6 {
+  @apply font-semibold text-[0.85em];
+}
+
+.markdown-preview p {
+  @apply mt-0 mb-2.5;
+}
+
+.markdown-preview blockquote {
+  @apply text-stone-400 m-0 px-[1em] py-0 border-l-[0.25em] border-l-stone-700 border-solid;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  @apply [list-style:disc] my-0 pl-[2em];
+}
+
+.markdown-preview ol ol,
+.markdown-preview ul ol {
+  @apply list-[lower-roman];
+}
+
+.markdown-preview ul ul ol,
+.markdown-preview ul ol ol,
+.markdown-preview ol ul ol,
+.markdown-preview ol ol ol {
+  @apply list-[lower-alpha];
+}
+
+.markdown-preview dd {
+  @apply ml-0;
+}
+
+.markdown-preview tt,
+.markdown-preview code,
+.markdown-preview samp {
+  @apply [font-family:ui-monospace,SFMono-Regular,SF_Mono,Menlo,Consolas,Liberation_Mono,monospace] text-xs;
+}
+
+.markdown-preview pre {
+  @apply bg-stone-900/50 [font-family:ui-monospace,SFMono-Regular,SF_Mono,Menlo,Consolas,Liberation_Mono,monospace] text-xs [word-wrap:normal] my-0 p-4 rounded-md;
+}
+
+.markdown-preview pre .language-http {
+  @apply text-white/85 bg-red-800;
+}
+
+.markdown-preview .octicon {
+  @apply inline-block overflow-visible align-text-bottom fill-current;
+}
+
+.markdown-preview input::-webkit-outer-spin-button,
+.markdown-preview input::-webkit-inner-spin-button {
+  @apply [-webkit-appearance:none] appearance-none m-0;
+}
+
+.markdown-preview::before {
+  @apply table content-[""];
+}
+
+.markdown-preview::after {
+  @apply table clear-both content-[""];
+}
+
+.markdown-preview > *:first-child {
+  @apply mt-0;
+}
+
+.markdown-preview > *:last-child {
+  @apply mb-0;
+}
+
+.markdown-preview a:not([href]) {
+  @apply text-inherit no-underline;
+}
+
+.markdown-preview p,
+.markdown-preview blockquote,
+.markdown-preview ul,
+.markdown-preview ol,
+.markdown-preview dl,
+.markdown-preview table,
+.markdown-preview pre,
+.markdown-preview details {
+  @apply mt-0 mb-4;
+}
+
+.markdown-preview blockquote > :first-child {
+  @apply mt-0;
+}
+
+.markdown-preview blockquote > :last-child {
+  @apply mb-0;
+}
+
+.markdown-preview h1 tt,
+.markdown-preview h1 code,
+.markdown-preview h2 tt,
+.markdown-preview h2 code,
+.markdown-preview h3 tt,
+.markdown-preview h3 code,
+.markdown-preview h4 tt,
+.markdown-preview h4 code,
+.markdown-preview h5 tt,
+.markdown-preview h5 code,
+.markdown-preview h6 tt,
+.markdown-preview h6 code {
+  @apply text-[inherit] px-[0.2em] py-0;
+}
+
+.markdown-preview summary h1,
+.markdown-preview summary h2,
+.markdown-preview summary h3,
+.markdown-preview summary h4,
+.markdown-preview summary h5,
+.markdown-preview summary h6 {
+  @apply inline-block;
+}
+
+.markdown-preview summary h1,
+.markdown-preview summary h2 {
+  @apply pb-0 border-b-0;
+}
+
+.markdown-preview ul.no-list,
+.markdown-preview ol.no-list {
+  @apply list-none p-0;
+}
+
+.markdown-preview ol[type="a s"] {
+  @apply list-[lower-alpha];
+}
+
+.markdown-preview ol[type="A s"] {
+  @apply list-[upper-alpha];
+}
+
+.markdown-preview ol[type="i s"] {
+  @apply list-[lower-roman];
+}
+
+.markdown-preview ol[type="I s"] {
+  @apply list-[upper-roman];
+}
+
+.markdown-preview ol[type="1"] {
+  @apply list-decimal;
+}
+
+.markdown-preview div > ol:not([type]) {
+  @apply list-decimal;
+}
+
+.markdown-preview ul ul,
+.markdown-preview ul ol,
+.markdown-preview ol ol,
+.markdown-preview ol ul {
+  @apply my-0;
+}
+
+.markdown-preview li > p {
+  @apply mt-4;
+}
+
+.markdown-preview li + li {
+  @apply mt-[0.25em];
+}
+
+.markdown-preview dl {
+  @apply p-0;
+}
+
+.markdown-preview dl dt {
+  @apply text-[1em] italic font-semibold mt-4 p-0;
+}
+
+.markdown-preview dl dd {
+  @apply mb-4 px-4 py-0;
+}
+
+.markdown-preview table th {
+  @apply font-semibold;
+}
+
+.markdown-preview table th,
+.markdown-preview table td {
+  @apply border px-[13px] py-1.5 border-solid border-stone-700;
+}
+
+.markdown-preview table td > :last-child {
+  @apply mb-0;
+}
+
+.markdown-preview table tr {
+  @apply bg-stone-900 border-t-stone-700 border-t border-solid;
+}
+
+.markdown-preview table tr:nth-child(2n) {
+  @apply bg-stone-900/50;
+}
+
+.markdown-preview table img {
+  @apply bg-transparent;
+}
+
+.markdown-preview img[align="right"] {
+  @apply pl-5;
+}
+
+.markdown-preview img[align="left"] {
+  @apply pr-5;
+}
+
+.markdown-preview .emoji {
+  @apply max-w-none align-text-top bg-transparent;
+}
+
+.markdown-preview span.frame {
+  @apply block overflow-hidden;
+}
+
+.markdown-preview span.frame > span {
+  @apply block float-left w-auto overflow-hidden border mt-[13px] mb-0 mx-0 p-[7px] border-solid bg-stone-900 border-stone-700;
+}
+
+.markdown-preview span.frame span img {
+  @apply block float-left;
+}
+
+.markdown-preview span.frame span span {
+  @apply block clear-both text-[#e6edf3] pt-[5px] pb-0 px-0;
+}
+
+.markdown-preview span.align-center {
+  @apply block overflow-hidden clear-both;
+}
+
+.markdown-preview span.align-center > span {
+  @apply block overflow-hidden text-center mt-[13px] mb-0 mx-auto;
+}
+
+.markdown-preview span.align-center span img {
+  @apply text-center mx-auto my-0;
+}
+
+.markdown-preview span.align-right {
+  @apply block overflow-hidden clear-both;
+}
+
+.markdown-preview span.align-right > span {
+  @apply block overflow-hidden text-right mt-[13px] mb-0 mx-0;
+}
+
+.markdown-preview span.align-right span img {
+  @apply text-right m-0;
+}
+
+.markdown-preview span {
+  @apply block float-left overflow-hidden mr-[13px];
+}
+
+.markdown-preview span span {
+  @apply mt-[13px] mb-0 mx-0;
+}
+
+.markdown-preview span {
+  @apply block float-right overflow-hidden ml-[13px];
+}
+
+.markdown-preview span span {
+  @apply block overflow-hidden text-right mt-[13px] mb-0 mx-auto;
+}
+
+.markdown-preview code,
+.markdown-preview tt {
+  @apply text-[85%] [white-space:break-spaces] bg-stone-700 m-0 px-[0.4em] py-[0.2em] rounded-md;
+}
+
+.markdown-preview code br,
+.markdown-preview tt br {
+  @apply hidden;
+}
+
+.markdown-preview del code {
+  @apply [text-decoration:inherit];
+}
+
+.markdown-preview samp {
+  @apply text-[85%];
+}
+
+.markdown-preview pre code {
+  @apply text-[100%];
+}
+
+.markdown-preview pre > code {
+  @apply break-normal whitespace-pre [background:transparent] m-0 p-0 border-0;
+}
+
+.markdown-preview .highlight {
+  @apply mb-4;
+}
+
+.markdown-preview .highlight pre {
+  @apply break-normal mb-0;
+}
+
+.markdown-preview pre code,
+.markdown-preview pre tt {
+  @apply inline max-w-[auto] overflow-visible leading-[inherit] [word-wrap:normal] bg-transparent m-0 p-1.5 border-0;
+}
+
+.markdown-preview [data-footnote-ref]::before {
+  @apply content-["["];
+}
+
+.markdown-preview [data-footnote-ref]::after {
+  @apply content-["]"];
+}
+
+.markdown-preview .footnotes {
+  @apply text-xs border-t-stone-700 border-t border-solid;
+}
+
+.markdown-preview .footnotes #footnote-label {
+  @apply hidden;
+}
+
+.markdown-preview .footnotes ol {
+  @apply pl-4;
+}
+
+.markdown-preview .footnotes ol ul {
+  @apply inline-block mt-4 pl-4;
+}
+
+.markdown-preview .footnotes li {
+  @apply relative list-decimal text-stone-400;
+}
+
+.markdown-preview .footnotes .data-footnote-backref {
+  @apply no-underline;
+}
+
+.markdown-preview g-emoji {
+  @apply inline-block min-w-[1ch] [font-family:"Apple_Color_Emoji","Segoe_UI_Emoji","Segoe_UI_Symbol"] text-[1em] not-italic font-normal leading-none [vertical-align:-0.075em];
+}
+
+.markdown-preview g-emoji img {
+  @apply w-[1em] h-[1em];
+}
+
+.markdown-preview .task-list-item {
+  @apply list-none;
+}
+
+.markdown-preview .task-list-item label {
+  @apply font-normal;
+}
+
+.markdown-preview .task-list-item.enabled label {
+  @apply cursor-pointer;
+}
+
+.markdown-preview .task-list-item + .task-list-item {
+  @apply mt-1;
+}
+
+.markdown-preview .task-list-item .handle {
+  @apply hidden;
+}
+
+.markdown-preview .contains-task-list {
+  @apply relative pl-0;
+}
+
+.markdown-code textarea {
+  @apply outline-0 w-full;
+}
+
+.markdown-code .syntax-highlighter {
+  @apply text-white bg-transparent;
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-tag {
+  @apply text-stone-200;
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-string {
+  color: #dc8a77;
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-attr,
+.markdown-code .syntax-highlighter .language-markdown .hljs-attribute,
+.markdown-code .syntax-highlighter .language-markdown .hljs-literal,
+.markdown-code .syntax-highlighter .language-markdown .hljs-meta,
+.markdown-code .syntax-highlighter .language-markdown .hljs-number,
+.markdown-code .syntax-highlighter .language-markdown .hljs-operator,
+.markdown-code .syntax-highlighter .language-markdown .hljs-selector-attr,
+.markdown-code .syntax-highlighter .language-markdown .hljs-selector-class,
+.markdown-code .syntax-highlighter .language-markdown .hljs-selector-id,
+.markdown-code .syntax-highlighter .language-markdown .hljs-variable {
+  @apply text-blue-500
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-meta .hljs-string,
+.markdown-code .syntax-highlighter .language-markdown .hljs-regexp,
+.markdown-code .syntax-highlighter .language-markdown .hljs-string {
+  @apply text-blue-400
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-built_in, .hljs-symbol {
+  @apply text-orange-500;
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-code,
+.markdown-code .syntax-highlighter .language-markdown .hljs-comment,
+.markdown-code .syntax-highlighter .language-markdown .hljs-formula {
+  @apply text-stone-400;
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-name,
+.markdown-code .syntax-highlighter .language-markdown .hljs-quote,
+.markdown-code .syntax-highlighter .language-markdown .hljs-selector-pseudo,
+.markdown-code .syntax-highlighter .language-markdown .hljs-selector-tag {
+  @apply text-green-500
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-section {
+  @apply text-blue-500 font-bold;
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-bullet {
+  @apply text-stone-500;
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-emphasis {
+  @apply text-stone-400 italic;
+}
+
+.markdown-code .syntax-highlighter .language-markdown .hljs-strong {
+  @apply text-white font-bold;
+}

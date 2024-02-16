@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     )
 
     const classes = clsx(
-        "flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl transition",
+        "flex w-fit cursor-pointer items-center justify-center gap-2 rounded-xl font-medium transition",
         {
             "bg-primary-600 hover:bg-primary-600/75 text-white": variant === "primary",
             "bg-stone-900 hover:bg-stone-900/75 text-stone-400": variant === "secondary",

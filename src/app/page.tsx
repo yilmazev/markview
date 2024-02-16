@@ -1,6 +1,6 @@
 import Home from "@/containers/Home"
 
-export default function Index() {
+export default function PageHome() {
     return (
         <Home />
     )

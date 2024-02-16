@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    @apply bg-stone-950 text-white;
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #a594fd #0c0a09;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0c0a09;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a594fd;
+  border-radius: 10px;
+  border: 3px solid #0c0a09;
 }
