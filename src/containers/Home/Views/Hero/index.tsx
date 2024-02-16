@@ -42,15 +42,15 @@ export default App
 
     return (
         <div className="flex min-h-svh w-full justify-center bg-headerGrid bg-cover bg-top bg-no-repeat">
-            <div className="my-24 flex flex-col items-center justify-center">
-                <div className="mb-32 flex flex-col items-center">
-                    <h1 className="mb-6 text-center text-6xl font-semibold">
+            <div className="my-12 flex w-full flex-col items-center justify-center lg:my-24">
+                <div className="mb-24 flex flex-col items-center lg:mb-32">
+                    <h1 className="mb-6 text-center text-4xl font-semibold lg:text-6xl">
                         Quickly create <span className="!bg-clip-text [-webkit-text-fill-color:#0000] [background:linear-gradient(0deg,#b1a5eb,#a594fd_90%)] [text-fill-color:#0000]">README.md</span>
                     </h1>
-                    <p className="mb-8 max-w-3xl text-center text-lg font-light text-white/75">
+                    <p className="mb-8 w-full text-center font-light text-white/75 lg:max-w-3xl lg:text-lg">
                         Markview offers the ability to quickly and effectively create stylish Markdown files, instantly enhancing your content. Add styles effortlessly and check the visual appeal of your content right away!
                     </p>
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-col items-center gap-4 sm:flex-row">
                         <Link href="/editor">
                             <Button>Get started</Button>
                         </Link>
@@ -62,9 +62,9 @@ export default App
                         </Link>
                     </div>
                 </div>
-                <div className="flex w-full items-center gap-3">
-                    <div className="markdown-preview size-96 overflow-hidden rounded-xl bg-stone-800 p-4">
-                        <ReactMarkdown className="size-full overflow-auto" remarkPlugins={[ remarkGfm, remarkHtml ]}>
+                <div className="flex w-full flex-col-reverse items-center justify-center gap-6 lg:flex-row">
+                    <div className="markdown-preview z-30 max-h-96 w-full max-w-96 overflow-auto rounded-xl bg-stone-800 p-4">
+                        <ReactMarkdown className="size-full" remarkPlugins={[ remarkGfm, remarkHtml ]}>
                             {markdown}
                         </ReactMarkdown>
                     </div>
@@ -74,7 +74,7 @@ export default App
                             <span className="size-3 rounded-full bg-stone-400/25" />
                             <span className="size-3 rounded-full bg-stone-400/25" />
                         </div>
-                        <div className="relative h-full max-h-[570px] min-h-[570px] w-[580px] overflow-auto">
+                        <div className="relative size-full overflow-auto lg:max-h-[570px] lg:min-h-[570px] lg:w-[580px]">
                             <Editor
                                 value={markdown}
                                 onValueChange={(markdown) => setMarkdown(markdown)}

@@ -26,6 +26,12 @@ export const IconMessageSquare: React.FC<IconProps> = ({ className }) => {
     )
 }
 
+export const IconMenuRightAlt: React.FC<IconProps> = ({ className }) => {
+    return (
+        <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Z"></path><path d="M4 18a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Z"></path><path d="M11 11a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-8Z"></path></svg>
+    )
+}
+
 export const IconTimes: React.FC<IconProps> = ({ className }) => {
     return (
         <svg className={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
