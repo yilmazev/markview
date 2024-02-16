@@ -284,11 +284,8 @@ https://www.example.com
                         <ReactMarkdown className="relative z-10 size-full overflow-auto" remarkPlugins={[ remarkGfm, remarkHtml ]}>
                             {markdown}
                         </ReactMarkdown>
-                        <div className="background">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                        <div className="absolute left-0 top-0 z-0 flex size-full grow overflow-hidden bg-preview">
+                            <div className="absolute left-[64%] top-[56%] h-0 w-[76%] -translate-x-2/4 -translate-y-2/4 rounded-full pt-[76%] opacity-40 blur-[240vw] [background:linear-gradient(132deg,#000000_0.00%,#a594fd8f_100.00%)]"></div>
                         </div>
                     </div>
                 </div>
