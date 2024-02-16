@@ -1,6 +1,6 @@
 import { clsx } from "clsx"
 import { ButtonHTMLAttributes, ReactNode } from "react"
-import { Spinner } from "../Icons"
+import { IconSpinner } from "../Icons"
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?: "primary" | "secondary" | "tertiary"
@@ -15,12 +15,12 @@ const Button: React.FC<ButtonProps> = (props) => {
     const { variant = "primary", size = "medium", isFull = false, isLoading = false, disabled, children, ...rest } = props
 
     const sizeClasses = {
-        small: "text-sm px-6 py-2.5",
-        medium: "px-7 py-3",
+        small: "text-sm px-6 py-2.5 h-10",
+        medium: "px-7 py-3 h-12",
         large: "text-xl px-6 py-4"
     }
 
-    const getSpinnerSizeClass = (size: ButtonProps["size"]) => (
+    const getIconSpinnerSizeClass = (size: ButtonProps["size"]) => (
         size === "small" ? "size-4" : size === "medium" ? "size-5" : "size-7"
     )
 
@@ -38,7 +38,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 
     return (
         <button className={classes} disabled={disabled || isLoading} {...rest}>
-            {isLoading && <Spinner className={`animate-spin fill-none ${getSpinnerSizeClass(size)}`} /> }
+            {isLoading && <IconSpinner className={`animate-spin fill-none ${getIconSpinnerSizeClass(size)}`} /> }
             {children}
         </button>
     )

@@ -1,7 +1,7 @@
 "use client"
 
 import Button from "@/components/Button"
-import { Heart } from "@/components/Icons"
+import { IconHeart } from "@/components/Icons"
 import "@/styles/github.min.css"
 import Link from "next/link"
 import { useState } from "react"
@@ -56,7 +56,7 @@ export default App
                         </Link>
                         <Link href="https://www.buymeacoffee.com/yilmazev" target="_blank">
                             <Button variant="secondary">
-                                <Heart className="size-5 fill-white/0 stroke-stone-400 stroke-[1.5px]" />
+                                <IconHeart className="size-5 fill-white/0 stroke-stone-400 stroke-[1.5px]" />
                                 Donate
                             </Button>
                         </Link>

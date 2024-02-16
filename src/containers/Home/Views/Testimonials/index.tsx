@@ -1,6 +1,6 @@
 "use client"
 
-import { Quote } from "@/components/Icons"
+import { IconQuote } from "@/components/Icons"
 import testimonialsData from "@/services/data/testimonials.json"
 
 const Testimonials: React.FC = () => {
@@ -17,7 +17,7 @@ const Testimonials: React.FC = () => {
                 {testimonialsData.map((testimonial: any, index: number) => (
                     <div key={index} className={`relative break-inside-avoid rounded-xl border border-stone-600 bg-stone-800 p-6 ${testimonial.isTop && "xl:top-16"}`}>
                         <div className="relative p-6">
-                            <Quote className="absolute left-0 top-0 size-6 fill-transparent stroke-primary-600 stroke-2" />
+                            <IconQuote className="absolute left-0 top-0 size-6 fill-transparent stroke-primary-600 stroke-2" />
                             <p className="text-xl">{testimonial.comment}</p>
                         </div>
                         <div className="flex space-y-1.5 p-6 pt-0">
