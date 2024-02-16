@@ -10,13 +10,13 @@ interface BaseLayoutProps {
 
 const BaseLayout: React.FC<BaseLayoutProps> = ({ children }) => {
     return (
-        <div>
-            <Navbar />
-            <div className="flex flex-col items-center justify-center">
+        <main className="flex flex-col items-center justify-center">
+            <div className="container">
+                <Navbar />
                 {children}
             </div>
             <Footer />
-        </div>
+        </main>
     )
 }
 
