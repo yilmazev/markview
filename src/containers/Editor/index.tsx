@@ -14,6 +14,7 @@ import remarkGfm from "remark-gfm"
 import remarkHtml from "remark-html"
 
 const EditorRenderer: React.FC = () => {
+    const [ isPreview, setIsPreview ] = useState<boolean>(false)
     const [ markdown, setMarkdown ] = useState<string>(`# Hello 👋
 ## What is Markdown?
 
@@ -245,18 +246,40 @@ https://www.example.com
     return (
         <div className="h-screen max-h-screen">
             <div className="h-full">
-                <div className="flex h-20 items-center justify-between border-b border-stone-700 bg-stone-900 px-10 py-6">
-                    <Link href="/" className="relative block h-[30px] w-[150px] lg:w-[190px]" aria-label="Home">
-                        <Image src="/assets/images/logo-light.svg" alt="Markview Logo" width={190} height={30} priority={true} />
-                        <span className="absolute -right-12 -top-2 rounded-lg bg-primary-600 px-2 py-1 text-xs font-medium">Beta</span>
-                    </Link>
-                    <Button size="small" onClick={downloadMarkdown}>
-                        <IconDownload className="size-6 fill-none stroke-white stroke-[1.5px]" />
-                        Download
-                    </Button>
+                <div className="flex h-36 flex-col bg-stone-900 lg:h-20">
+                    <div className="flex h-full items-center justify-between border-b border-stone-700 px-4 lg:px-10">
+                        <Link href="/" className="relative block h-[30px] w-[150px] lg:w-[190px]" aria-label="Home">
+                            <Image src="/assets/images/logo-light.svg" alt="Markview Logo" width={190} height={30} priority={true} />
+                            <span className="absolute -right-12 -top-2 rounded-lg bg-primary-600 px-2 py-1 text-xs font-medium">Beta</span>
+                        </Link>
+                        <Button size="small" onClick={downloadMarkdown} style={{ padding: "10px" }}>
+                            <IconDownload className="size-5 fill-none stroke-white stroke-[1.5px] lg:size-6" />
+                            <span className="hidden lg:block">Download</span>
+                        </Button>
+                    </div>
+                    <div className="flex gap-6 px-4 pt-5 lg:hidden lg:px-10">
+                        <Button
+                            variant="tertiary"
+                            size="small"
+                            color={isPreview ? "light" : null}
+                            onClick={() => setIsPreview(false)}
+                            style={{ paddingBottom: "12px", borderBottom: `2px solid ${isPreview ? "transparent" : "#a594fd "}` }}
+                        >
+                            Markdown
+                        </Button>
+                        <Button
+                            variant="tertiary"
+                            size="small"
+                            color={!isPreview ? "light" : null}
+                            onClick={() => setIsPreview(true)}
+                            style={{ paddingBottom: "12px", borderBottom: `2px solid ${isPreview ? "#a594fd" : "transparent "}` }}
+                        >
+                            Preview
+                        </Button>
+                    </div>
                 </div>
-                <div className="flex h-[calc(100%-80px)] w-full gap-[1px] bg-stone-700">
-                    <div className="markdown-code w-1/2 bg-stone-800">
+                <div className="flex h-[calc(100%-9rem)] w-full gap-[1px] bg-stone-700 lg:h-[calc(100%-5rem)]">
+                    <div className={`markdown-code w-full bg-stone-800 lg:block lg:w-1/2 ${isPreview ? "hidden" : "block"}`}>
                         <div className="relative size-full overflow-auto">
                             <Editor
                                 value={markdown}
@@ -280,8 +303,8 @@ https://www.example.com
                             />
                         </div>
                     </div>
-                    <div className="markdown-preview relative w-1/2 px-12 pt-6">
-                        <ReactMarkdown className="relative z-10 size-full overflow-auto" remarkPlugins={[ remarkGfm, remarkHtml ]}>
+                    <div className={`markdown-preview relative w-full lg:block lg:w-1/2 ${isPreview ? "block" : "hidden"}`}>
+                        <ReactMarkdown className="relative z-10 size-full overflow-auto px-4 pt-4 lg:px-12 lg:pt-6" remarkPlugins={[ remarkGfm, remarkHtml ]}>
                             {markdown}
                         </ReactMarkdown>
                         <div className="absolute left-0 top-0 z-0 flex size-full grow overflow-hidden bg-preview">
