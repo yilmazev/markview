@@ -9,6 +9,7 @@
     "lint": "eslint --fix '**/*.{tsx,ts}'"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.2.0",
     "clsx": "^2.1.0",
     "emailjs-com": "^3.2.0",
     "file-saver": "^2.0.5",

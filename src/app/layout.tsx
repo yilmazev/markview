@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 
@@ -26,7 +27,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 <meta name="msapplication-TileColor" content="#b6a8ff" />
                 <meta name="theme-color" content="#b6a8ff" />
             </head>
-            <body className={`bg-stone-950 text-white antialiased ${inter.className}`}>{children}</body>
+            <body className={`bg-stone-950 text-white antialiased ${inter.className}`}>
+                {children}
+                <Analytics />
+            </body>
         </html>
     )
 }
