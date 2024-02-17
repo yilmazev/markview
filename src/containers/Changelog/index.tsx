@@ -43,8 +43,8 @@ const Changelog: React.FC = () => {
     return (
         <BaseLayout>
             <div className="mb-12 mt-6 flex flex-col items-center justify-center lg:mb-24 lg:mt-12">
-                <div className="mb-12 flex max-w-lg flex-col items-center">
-                    <h1 className="mb-2 text-center text-xl font-semibold md:text-3xl lg:mb-4 lg:text-4xl">Changelog</h1>
+                <div className="mb-6 flex max-w-lg flex-col items-center lg:mb-12">
+                    <h1 className="mb-2 text-center text-2xl font-semibold md:text-3xl lg:mb-4 lg:text-4xl">Changelog</h1>
                     <p className="text-center text-sm font-light text-white/75 lg:text-base">Find all new features, improvements, and bugfixes here.</p>
                 </div>
                 <div className="relative mx-auto flex w-full flex-col items-center justify-center">
