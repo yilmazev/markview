@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![Markview Logo](https://Markview.yilmazev.dev/assets/images/logo-light.svg)
 
-## Getting Started
+Markview is a tool that allows you to quickly and easily create Markdown files with a fast and user-friendly interface. With the ability to preview changes instantly, you can efficiently edit and create your files.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Fast and Easy Interface:** Markview enables you to quickly create Markdown files with its user-friendly interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Instant Preview of Changes:** Use the preview mode to instantly see the changes you make and check how your file will look.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Download Your File:** Easily download the Markdown file you've created and use it in your projects.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## User Guide
 
-## Learn More
+1. **Access Markview:**
+   - [Go to Markview](https://Markview.yilmazev.dev)
 
-To learn more about Next.js, take a look at the following resources:
+2. **Click on Get Started:**
+   - Click on the **Get Started** button on the webpage.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Create and View Your Markdown File:**
+   - Create a new Markdown file through the Markview interface and instantly preview your changes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. **Download Your Markdown File:**
+   - Click on the download button in the Markview interface, and there you have your ready-to-use Markdown file.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). For detailed information, you can review the [LICENSE](LICENSE) file.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contribution
+
+If you wish to contribute to this project, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+## Contact
+
+Feel free to [contact us](https://Markview.yilmazev.dev/feedback) with any questions or feedback.
+
+---
+© 2024 Markview Project. All rights reserved.
