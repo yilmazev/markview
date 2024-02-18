@@ -8,7 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     size?: "small" | "medium" | "large"
     isFull?: boolean
     isLoading?: boolean
-    extraStyle?: string,
+    extraStyle?: string
     children: ReactNode
 }
 
@@ -36,10 +36,10 @@ const Button: React.FC<ButtonProps> = ({
         "flex cursor-pointer items-center justify-center gap-2 rounded-xl font-medium transition",
         {
             [sizeClasses[size]]: sizeClasses[size],
-            "bg-primary-600 hover:bg-primary-600/75 text-white": variant === "primary",
+            "bg-primary-600 hover:bg-primary-600/75 text-white": variant === "primary" && color === "primary",
             "bg-green-600 hover:bg-green-600/75 text-white": variant === "primary" && color === "success",
-            "bg-stone-900 hover:bg-stone-900/75 text-stone-400": variant === "secondary",
-            "text-primary-600 !py-0 !px-0 !h-auto !rounded-none": variant === "tertiary",
+            "bg-stone-900 hover:bg-stone-900/75 text-stone-400": variant === "secondary" && color === "primary",
+            "text-primary-600 !py-0 !px-0 !h-auto !rounded-none": variant === "tertiary" && color === "primary",
             "text-white/85 !py-0 !px-0 !h-auto !rounded-none": variant === "tertiary" && color === "light",
             "w-full": isFull,
             "disabled:bg-stone-600 disabled:opacity-50 disabled:cursor-default": disabled
