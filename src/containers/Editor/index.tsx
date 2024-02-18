@@ -7,7 +7,7 @@ import "@/styles/github.min.css"
 import { saveAs } from "file-saver"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import ReactMarkdown from "react-markdown"
 import Editor from "react-simple-code-editor"
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight"
@@ -244,6 +244,20 @@ https://www.example.com
         const blob = new Blob([ markdown ], { type: "text/markdown" })
         saveAs(blob, "markview.md")
     }
+
+    useEffect(() => {
+        const handleBeforeUnload = (e: any) => {
+            const message = "Are you sure you want to leave the page?"
+            e.returnValue = message
+            return message
+        }
+    
+        window.addEventListener("beforeunload", handleBeforeUnload)
+    
+        return () => {
+            window.removeEventListener("beforeunload", handleBeforeUnload)
+        }
+    }, [])
 
     return (
         <div className="h-svh max-h-svh">
