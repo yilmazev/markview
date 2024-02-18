@@ -1,5 +1,10 @@
 [
     {
+        "label": "improvement",
+        "title": "Added leave page warning",
+        "publishDate": "2024-02-19"
+    },
+    {
         "label": "new",
         "title": "Added donation modal and button to editor page",
         "publishDate": "2024-02-19"
