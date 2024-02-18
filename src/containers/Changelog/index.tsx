@@ -49,7 +49,7 @@ const Changelog: React.FC = () => {
                 </div>
                 <div className="relative mx-auto flex w-full flex-col items-center justify-center">
                     {groupedChangelogData.map((group: GroupedChangelog, index: number) => (
-                        <section key={index} className="w-full max-w-96 justify-center md:flex">
+                        <section key={index} className="w-full max-w-lg justify-center md:flex">
                             <div className="relative w-full pb-16 pl-8 md:pl-12 md:pt-0">
                                 <div className="absolute inset-y-0 left-0 w-1 bg-stone-900 md:top-2.5" />
                                 <div className="absolute -left-2.5 top-0 size-6 rounded-full border-[3px] border-stone-900 bg-stone-950 md:top-0" />
