@@ -42,7 +42,7 @@ const Button: React.FC<ButtonProps> = ({
             "text-primary-600 !py-0 !px-0 !h-auto !rounded-none": variant === "tertiary",
             "text-white/85 !py-0 !px-0 !h-auto !rounded-none": variant === "tertiary" && color === "light",
             "w-full": isFull,
-            "disabled:bg-stone-600 disabled:opacity-50 disabled:cursor-default": disabled,
+            "disabled:bg-stone-600 disabled:opacity-50 disabled:cursor-default": disabled
         },
         extraStyle
     )
