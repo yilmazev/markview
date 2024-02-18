@@ -1,6 +1,11 @@
 [
     {
         "label": "new",
+        "title": "Added donation modal and button to editor page",
+        "publishDate": "2024-02-19"
+    },
+    {
+        "label": "new",
         "title": "Open beta",
         "publishDate": "2024-02-18"
     }

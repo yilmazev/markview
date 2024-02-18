@@ -1,7 +1,8 @@
 "use client"
 
 import Button from "@/components/Button"
-import { IconDownload } from "@/components/Icons"
+import { IconDownload, IconHeart } from "@/components/Icons"
+import Modal from "@/components/Modal"
 import "@/styles/github.min.css"
 import { saveAs } from "file-saver"
 import Image from "next/image"
@@ -14,6 +15,7 @@ import remarkGfm from "remark-gfm"
 import remarkHtml from "remark-html"
 
 const EditorRenderer: React.FC = () => {
+    const [ isShowDonateModal, setIsShowDonateModal ] = useState<boolean>(true)
     const [ isPreview, setIsPreview ] = useState<boolean>(false)
     const [ markdown, setMarkdown ] = useState<string>(`# Hello 👋
 ## What is Markdown?
@@ -245,6 +247,21 @@ https://www.example.com
 
     return (
         <div className="h-svh max-h-svh">
+            {isShowDonateModal && (
+                <Modal size="small" title="Ad-Free Experience" onClose={() => setIsShowDonateModal(false)}>
+                    <h2 className="mb-2 text-xl font-semibold">Support Us</h2>
+                    <p className="text-sm text-white/85">You can contribute to enjoying our website without ads and at a faster pace. Every donation supports our efforts to provide you with a better experience.</p>
+                    <div className="mt-6 flex items-center justify-end gap-3">
+                        <Button variant="secondary" size="small" onClick={() => setIsShowDonateModal(false)}>Close</Button>
+                        <Link href="https://www.buymeacoffee.com/yilmazev" target="_blank" aria-label="Donate">
+                            <Button size="small">
+                                <IconHeart className="size-5 fill-transparent stroke-white stroke-[1.5px]" />
+                                Donate
+                            </Button>
+                        </Link>
+                    </div>
+                </Modal>
+            )}
             <div className="h-full">
                 <div className="flex h-36 flex-col bg-stone-900 lg:h-20">
                     <div className="flex h-full items-center justify-between border-b border-stone-700 px-4 lg:px-10">
@@ -252,10 +269,18 @@ https://www.example.com
                             <Image src="/assets/images/logo-light.svg" alt="Markview Logo" width={190} height={30} priority={true} />
                             <span className="absolute -right-12 -top-2 rounded-lg bg-primary-600 px-2 py-1 text-xs font-medium">Beta</span>
                         </Link>
-                        <Button size="small" onClick={downloadMarkdown} style={{ padding: "10px" }}>
-                            <IconDownload className="size-5 fill-none stroke-white stroke-[1.5px] lg:size-6" />
-                            <span className="hidden lg:block">Download</span>
-                        </Button>
+                        <div className="flex items-center gap-1 sm:gap-3">
+                            <Button size="small" onClick={downloadMarkdown} style={{ padding: "10px" }}>
+                                <IconDownload className="size-5 fill-none stroke-white stroke-[1.5px] lg:size-6" />
+                                <span className="hidden lg:block">Download</span>
+                            </Button>
+                            <Link href="https://www.buymeacoffee.com/yilmazev" target="_blank" aria-label="Donate">
+                                <Button size="small" style={{ padding: "10px" }}>
+                                    <IconHeart className="size-5 fill-transparent stroke-white stroke-[1.5px]" />
+                                    <span className="hidden lg:block">Donate</span>
+                                </Button>
+                            </Link>
+                        </div>
                     </div>
                     <div className="flex gap-6 px-4 pt-5 lg:hidden lg:px-10">
                         <Button
