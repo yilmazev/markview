@@ -244,7 +244,7 @@ https://www.example.com
     }
 
     return (
-        <div className="h-screen max-h-screen">
+        <div className="h-svh max-h-svh">
             <div className="h-full">
                 <div className="flex h-36 flex-col bg-stone-900 lg:h-20">
                     <div className="flex h-full items-center justify-between border-b border-stone-700 px-4 lg:px-10">
@@ -261,18 +261,18 @@ https://www.example.com
                         <Button
                             variant="tertiary"
                             size="small"
-                            color={isPreview ? "light" : null}
+                            color={isPreview ? "light" : "primary"}
+                            extraStyle={`!pb-3 border-b-2 ${isPreview ? "border-transparent" : "border-primary-600"}`}
                             onClick={() => setIsPreview(false)}
-                            style={{ paddingBottom: "12px", borderBottom: `2px solid ${isPreview ? "transparent" : "#a594fd "}` }}
                         >
                             Markdown
                         </Button>
                         <Button
                             variant="tertiary"
                             size="small"
-                            color={!isPreview ? "light" : null}
+                            color={!isPreview ? "light" : "primary"}
+                            extraStyle={`!pb-3 border-b-2 ${isPreview ? "border-primary-600" : "border-transparent"}`}
                             onClick={() => setIsPreview(true)}
-                            style={{ paddingBottom: "12px", borderBottom: `2px solid ${isPreview ? "#a594fd" : "transparent "}` }}
                         >
                             Preview
                         </Button>
